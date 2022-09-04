@@ -6,8 +6,8 @@ const { species } = data;
 
 function getOldestFromFirstSpecies(id) {
   const getSpeciesId = employees.find((employee) => employee.id === id).responsibleFor;
-  const oldestAnimal = species
-    .find((element) => getSpeciesId.find((element2) => element.id === element2)).residents
+  const oldestAnimal = species.find((element) => getSpeciesId
+    .find((element2) => element.id === element2)).residents
     .reduce((acc, curr) => (acc.age > curr.age ? acc : curr));
   return Object.values(oldestAnimal);
 }

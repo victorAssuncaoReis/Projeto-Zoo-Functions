@@ -18,6 +18,9 @@ describe('Testes da função getOpeningHours', () => {
   it('Testa se ao receber um parâmetro com horário fora do expediente retorna a string "The Zoo is closed"', () => {
     expect(getOpeningHours('Friday', '09:00-PM')).toEqual('The zoo is closed');
   });
+  it('Testa se ao receber um parâmetro com horário fora do expediente no dia "Monday" retorna a string "The Zoo is closed"', () => {
+    expect(getOpeningHours('Monday', '09:00-PM')).toEqual('The zoo is closed');
+  });
   it('Testa se ao receber um parâmetro com horário correto retorna "The zoo is open"', () => {
     expect(getOpeningHours('Saturday', '09:00-AM')).toBe('The zoo is open');
   });
